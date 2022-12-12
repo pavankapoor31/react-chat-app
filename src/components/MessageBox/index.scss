@@ -1,0 +1,27 @@
+.message {
+  display: flex;
+  align-items: flex-start;
+  margin: 1rem 2rem;
+  &__user-profile {
+    &--image {
+      border-radius: 50%;
+    }
+  }
+  &__user-details {
+    margin-left: 0.5rem;
+    &__row {
+      margin-top: 0.3rem;
+    }
+    &__time {
+      margin-left: 0.3rem;
+      color: gray;
+      font-size: 0.75rem;
+    }
+  }
+  &__body {
+    text-align: center;
+    background: #fff;
+    border-radius: 0 1rem 1rem 1rem;
+    padding: 1rem;
+  }
+}
