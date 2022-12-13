@@ -8,18 +8,19 @@ import userList from './../../assets/data/userList.json';
 import './index.scss';
 const ChatPage = ({ data }) => {
   const [messageData, setMessageData] = useState(chatData);
+  // Storing messages in a state
   const [users] = useState(userList);
+  // Storing user details in a state
   const handleMessageSend = (data) => {
     setMessageData((state, props) => {
       scrollBottom();
       return [...state, data];
     });
+    // above code appends the new message to the message data
   };
   const messageBody = React.createRef();
   const scrollBottom = () => {
-    // const scroll =
-    //   messageBody.current.scrollHeight - messageBody.current.clientHeight;
-    messageBody.current?.scrollIntoView({ behavior: 'smooth' });
+    messageBody.current?.scrollIntoView({ behaviour: 'smooth' });
   };
   return (
     <div className='chat-app__container'>
@@ -31,14 +32,12 @@ const ChatPage = ({ data }) => {
           {messageData &&
             messageData.map((item, i) => {
               return (
-                <>
-                  <span key={item.userName + i}>
-                    <MessageBox {...item} />
-                  </span>
-                </>
+                <span key={item.userName + i}>
+                  <MessageBox {...item} />
+                </span>
               );
             })}
-          <div ref={messageBody} style={{ paddingBottom: '6rem' }}></div>
+          <div className='scroll-margin' ref={messageBody}></div>
         </div>
         <div className='chat-app__footer'>
           <div className='chat-app__footer__fixed'>

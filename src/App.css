@@ -11,13 +11,14 @@
     background-color: #E7EAF1;
     min-height: -moz-available;
     min-height: -webkit-fill-available;
-    min-height: fill-available;
+    min-height: stretch;
 
   }
 
   html,
   body {
-    font-size: 40%;
+    font-size: 50%;
   }
+
 
 }

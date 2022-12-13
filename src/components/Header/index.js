@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import defaultUserImage from './../../assets/images/user.png';
 import './index.scss';
+
 export const Header = ({ title, description, noOfUsers, totalUsers }) => {
   return (
     <div className='header'>

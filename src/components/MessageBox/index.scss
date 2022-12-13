@@ -18,8 +18,11 @@
       font-size: 0.75rem;
     }
   }
+  &__liker {
+    cursor: pointer;
+  }
   &__body {
-    text-align: center;
+    text-align: left;
     background: #fff;
     border-radius: 0 1rem 1rem 1rem;
     padding: 1rem;

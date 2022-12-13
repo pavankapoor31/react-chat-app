@@ -3,9 +3,7 @@ import ChatPage from './pages/ChatPage';
 function App() {
   return (
     <div className='app'>
-      <div>
-        <ChatPage />
-      </div>
+      <ChatPage />
     </div>
   );
 }
